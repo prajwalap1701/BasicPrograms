@@ -9,7 +9,7 @@ def sample_fun():
     language = "Python"
     company = "MyCompany"
     Itemid = 1
-    price = 0.00
+    price = 100.0
  
     # Create Dictionary
     value = {
