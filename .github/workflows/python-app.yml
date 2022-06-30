@@ -39,4 +39,4 @@ jobs:
       run: python json_script.py
     - name: Print Output
       run: |
-        echo "${{fronJson(steps.json_code.outputs)}}"
+        echo "${{fromJson(steps.json_code.outputs)}}"
