@@ -38,4 +38,4 @@ jobs:
       id: json_code
       run: python json_script.py
     - name: Print Output
-      run: echo "${{ fromJson(steps.json_code.outputs) }}"
+      run: echo "${{ steps.json_code.outputs }}"
