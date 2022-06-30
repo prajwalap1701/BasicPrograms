@@ -38,4 +38,5 @@ jobs:
       id: json_code
       run: python json_script.py
     - name: Print Output
-      run: echo "${{ steps.json_code.outputs }}"
+      run: |
+        echo "${{fronJson(steps.json_code.outputs)}}"
