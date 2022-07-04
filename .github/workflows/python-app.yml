@@ -47,4 +47,6 @@ jobs:
       uses: jannekem/run-python-script-action@v1
       with:
         script: |
-          print(${{ steps.json_code.outputs.scriptop }})
+          data=${{ steps.json_code.outputs.scriptop }}
+          print(type(data))
+          print(data)
