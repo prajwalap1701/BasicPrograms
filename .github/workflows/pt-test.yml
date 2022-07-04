@@ -19,4 +19,4 @@ jobs:
         uses: jannekem/run-python-script-action@v1
         with:
           script: |
-            print(${{ toJSON(steps.json_script.outputs) }})
+            print(${{ fromJSON(steps.json_script.outputs) }})
