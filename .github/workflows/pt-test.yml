@@ -12,11 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
+      - run: python json_script.py
       - uses: jannekem/run-python-script-action@v1
         with:
           script: |
-            import os
-            print("Directory contents:")
-            for f in os.listdir():
-                print(f)
-      - run: python json_script.py
+            print("Hello world")
