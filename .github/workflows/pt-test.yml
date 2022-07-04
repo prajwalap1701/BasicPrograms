@@ -14,4 +14,9 @@ jobs:
       - uses: actions/setup-python@v2
       - uses: jannekem/run-python-script-action@v1
         with:
-          script: json_script.py
+          script: |
+            import os
+            print("Directory contents:")
+            for f in os.listdir():
+                print(f)
+      - run: python json_script.py
