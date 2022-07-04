@@ -36,7 +36,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Run json_script.py
       id: json_code
-      run: python json_script.py
+      run: |
+        python json_script.py
+        print("Hello Wrold")
     - name: Print Output
       run: |
         echo "${{steps.json_code.outputs}}"
