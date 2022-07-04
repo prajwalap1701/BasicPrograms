@@ -37,8 +37,8 @@ jobs:
     - name: Run json_script.py
       id: json_code
       run: |
-        python json_script.py
-        echo "Hello Wrold"
+        output=$(python json_script.py)
+        echo "::set-output name=scriptop::$output"
     - name: Print Output
       run: |
-        echo "${{steps.json_code.outputs}}"
+        echo "${{steps.json_code.outputs.scriptop}}"
