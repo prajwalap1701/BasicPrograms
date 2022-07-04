@@ -38,7 +38,7 @@ jobs:
       id: json_code
       run: |
         python json_script.py
-        print("Hello Wrold")
+        echo "Hello Wrold"
     - name: Print Output
       run: |
         echo "${{steps.json_code.outputs}}"
