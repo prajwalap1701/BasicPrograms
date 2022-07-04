@@ -42,3 +42,9 @@ jobs:
     - name: Print Output
       run: |
         echo "${{steps.json_code.outputs.scriptop}}"
+        
+    - name: Execute Script
+      uses: jannekem/run-python-script-action@v1
+      with:
+        script: |
+          print(${{ steps.json_code.outputs.scriptop }})
